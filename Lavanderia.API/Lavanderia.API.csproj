@@ -22,4 +22,8 @@
     <ProjectReference Include="..\Lavanderia.Data\Lavanderia.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Utils\Facturas\" />
+  </ItemGroup>
+
 </Project>

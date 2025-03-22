@@ -49,7 +49,7 @@ namespace Lavanderia.API.Controllers
         }
 
         [HttpPost]
-        [Route("Elimiar")]
+        [Route("Eliminar")]
         public async Task<ActionResult<OperationResult>> EliminarProducto(int productoId)
         {
             _result = await _SProductos.DesactivarProducto(productoId);
@@ -57,7 +57,7 @@ namespace Lavanderia.API.Controllers
             {
                 return Ok(_result);
             }
-            return BadRequest(_result);
+            return NotFound(_result);
         }
 
 

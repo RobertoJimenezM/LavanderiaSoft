@@ -19,5 +19,6 @@ namespace Lavanderia.Data.Models
         public bool Estado { get; set; }
         [Column(TypeName = "decimal(10,2)")]
         public decimal Total { get; set; }
+        public virtual ICollection<OrdenesDetails> OrdenesDetails { get; set; } = new List<OrdenesDetails>();
     }
 }

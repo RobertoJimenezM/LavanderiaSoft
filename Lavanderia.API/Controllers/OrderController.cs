@@ -18,18 +18,18 @@ namespace Lavanderia.API.Controllers
         }
 
 
-        //[HttpGet]
-        //public async Task<ActionResult<OperationResult>> GetOrder()
-        //{
-        //    _result.SuccessMessage = "El mejor esto esta funcionando";
-        //    return Ok(_result);
-        //}
+        [HttpGet]
+        public async Task<ActionResult<OperationResult>> GetOrder()
+        {
+            _result.SuccessMessage = "El mejor esto esta funcionando";
+            return Ok(_result);
+        }
 
         //[HttpPost]
         //[Route("Crear-Cliente")]
         //public async Task<ActionResult<OperationResult>> CrearCliente([FromBody] ClienteDto clienteDto)
         //{
-            
+
         //    _result = await _SCliente.CrearCliente(clienteDto);
         //    if (_result.Success)
         //    {
