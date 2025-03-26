@@ -43,5 +43,13 @@ namespace Lavanderia.API.Controllers
         }
 
 
+        [HttpPost]
+        [Route("Elimiar-Orden")]
+        public async Task<ActionResult<OperationResult>> EliminarOrdenById(int OrdenId)
+        {
+            _result.SuccessMessage = "LO REALIZARE EN EL SERVICIO LA LOGICA";
+            return Ok(_result);
+        }
+
     }
 }
