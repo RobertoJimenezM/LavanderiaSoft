@@ -25,21 +25,22 @@ namespace Lavanderia.API.Controllers
             return Ok(_result);
         }
 
-        //[HttpPost]
-        //[Route("Crear-Cliente")]
-        //public async Task<ActionResult<OperationResult>> CrearCliente([FromBody] ClienteDto clienteDto)
-        //{
 
-        //    _result = await _SCliente.CrearCliente(clienteDto);
-        //    if (_result.Success)
-        //    {
-        //        return Ok(_result);
-        //    }
-        //    return BadRequest(_result);
+        [HttpGet]
+        [Route("Obtener-Ordernes-id")]
+        public async Task<ActionResult<OperationResult>> GetOrderById()
+        {
+            _result.SuccessMessage = "LO REALIZARE EN EL SERVICIO LA LOGICA";
+            return Ok(_result);
+        }
 
-
-        //}
-
+        [HttpPost]
+        [Route("Crear-Orden")]
+        public async Task<ActionResult<OperationResult>> CrearOrden()
+        {
+            _result.SuccessMessage = "LO REALIZARE EN EL SERVICIO LA LOGICA";
+            return Ok(_result);
+        }
 
 
     }
