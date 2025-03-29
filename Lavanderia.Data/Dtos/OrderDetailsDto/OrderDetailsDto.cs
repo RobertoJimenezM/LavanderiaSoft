@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Lavanderia.Data.Dtos.OrdenDto;
+using Lavanderia.Data.Dtos.ProductoDto;
 
 namespace Lavanderia.Data.Dtos.OrderDetailsDto
 {
@@ -16,5 +18,8 @@ namespace Lavanderia.Data.Dtos.OrderDetailsDto
         public decimal PrecioUnitario { get; set; }
         public decimal Subtotal { get; set; }
         public bool Estado { get; set; }
+
+        public virtual ProductoDto.ProductoDto ProductoDto { get; set; }
+        public virtual OrdenDto.OrdenDto OrdenDto {  get; set; } 
     }
 }

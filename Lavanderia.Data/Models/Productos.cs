@@ -22,6 +22,7 @@ namespace Lavanderia.Data.Models
         public DateTime FechaCrea { get; set; }
         public DateTime FechaMod {  get; set; }
         public bool Estado { get; set; }
+        public virtual ICollection<OrdenesDetails> OrdenesDetails { get; set; } = new List<OrdenesDetails>();
 
 
     }

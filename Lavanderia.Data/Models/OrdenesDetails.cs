@@ -22,5 +22,8 @@ namespace Lavanderia.Data.Models
         [Column(TypeName = "decimal(10,2)")]
         public decimal Subtotal { get; set; }
         public bool Estado { get; set; }
+
+        public virtual Ordenes Ordenes { get; set; }
+        public virtual Productos Productos { get; set; }
     }
 }

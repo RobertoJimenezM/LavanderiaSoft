@@ -83,6 +83,7 @@ namespace Lavanderia.Bussines.Services.SProductos
                 producto.Estado = false;
 
                 //_context.Productos.Update(producto);
+                _context.Entry(producto).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
                 _result.Success = _success;
                 _result.SuccessMessage = _sucessMessage;
