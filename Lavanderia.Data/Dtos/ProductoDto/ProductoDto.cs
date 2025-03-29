@@ -14,6 +14,6 @@ namespace Lavanderia.Data.Dtos.ProductoDto
         public string? Nombre { get; set; }
         public string? Descripcion { get; set; }
         public decimal Precio { get; set; }
-        public virtual ICollection<OrderDetailsDto.OrderDetailsDto> orderDetails { get; set; } = new List<OrderDetailsDto.OrderDetailsDto>();
+        //public virtual ICollection<OrderDetailsDto.OrderDetailsDto> orderDetails { get; set; } = new List<OrderDetailsDto.OrderDetailsDto>();
     }
 }

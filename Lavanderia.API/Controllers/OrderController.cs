@@ -1,6 +1,8 @@
 ﻿using Lavanderia.Bussines.Model;
 using Lavanderia.Bussines.Services.SClientes;
+using Lavanderia.Bussines.Services.SOrdenes;
 using Lavanderia.Data.Dtos.ClienteDto;
+using Lavanderia.Data.Dtos.OrdenDto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lavanderia.API.Controllers
@@ -10,11 +12,12 @@ namespace Lavanderia.API.Controllers
     public class OrderController : Controller
     {
         private OperationResult _result;
-        private SCliente _SCliente;
-        public OrderController(SCliente sCliente)
+        private SOrdenes _SOrdenes;
+        public OrderController(SOrdenes ordenes)
         {
-            _SCliente = sCliente;
+            _SOrdenes = ordenes;
             _result = new OperationResult();
+
         }
 
 
@@ -36,10 +39,14 @@ namespace Lavanderia.API.Controllers
 
         [HttpPost]
         [Route("Crear-Orden")]
-        public async Task<ActionResult<OperationResult>> CrearOrden()
+        public async Task<ActionResult<OperationResult>> CrearOrden(OrdenDto ordenDto)
         {
-            _result.SuccessMessage = "LO REALIZARE EN EL SERVICIO LA LOGICA";
-            return Ok(_result);
+            _result = await _SOrdenes.CrearOrden(ordenDto);
+            if (_result.Success)
+            {
+                return Ok(_result);
+            }
+            return BadRequest(_result);
         }
 
 

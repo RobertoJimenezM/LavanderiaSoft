@@ -19,7 +19,7 @@ namespace Lavanderia.Data.Dtos.OrderDetailsDto
         public decimal Subtotal { get; set; }
         public bool Estado { get; set; }
 
-        public virtual ProductoDto.ProductoDto ProductoDto { get; set; }
-        public virtual OrdenDto.OrdenDto OrdenDto {  get; set; } 
+        //public virtual ProductoDto.ProductoDto ProductoDto { get; set; }
+        //public virtual OrdenDto.OrdenDto OrdenDto {  get; set; } 
     }
 }
